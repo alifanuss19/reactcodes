@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 const Timefunchoo = () => {
   const [timeis, setTimeis] = useState(new Date().toLocaleTimeString());
-  times = () => {
+  const times = () => {
     setTimeis(new Date().toLocaleTimeString());
     //clearInterval(timesID);
   };
