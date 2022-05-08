@@ -6,19 +6,19 @@ class Formclass extends Component {
         name:"",
       };
     };
-    chname=(event)=>{
+    chName=(event)=>{
       this.setState({[event.target.name]:event.target.value.toUpperCase()});
     };
-    subdata=(event)=>{
+    subData=(event)=>{
       event.preventDefault();
     };
     render(){
       return(
         <div>
-          <form onSubmit={this.subdata}>
+          <form onSubmit={this.subData}>
             <label>
               name:
-              <input name="name" type="text" value={this.state.name} onChange={this.chname}/>
+              <input name="name" type="text" value={this.state.name} onChange={this.chName}/>
             </label>
             <input type="submit" value="submit"/>
           </form>
