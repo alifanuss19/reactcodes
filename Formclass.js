@@ -14,7 +14,7 @@ class Formclass extends Component {
     };
     render(){
       return(
-        <div>
+        <>
           <form onSubmit={this.subData}>
             <label>
               name:
@@ -22,7 +22,7 @@ class Formclass extends Component {
             </label>
             <input type="submit" value="submit"/>
           </form>
-        </div>
+        </>
       );
     };
 };
