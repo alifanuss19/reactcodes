@@ -1,26 +1,42 @@
 import React, { PureComponent } from 'react';
 class Formclass extends PureComponent {
-    constructor(props){
-      super(props);
-      this.state={
-        name:"",
-      };
-    };
-    chName=(event)=>{
-      this.setState({[event.target.name]:event.target.value.toUpperCase()});
-    };
-    subData=(event)=>{
+    //one & bad
+    // constructor(props){
+    //   super(props);
+    //   this.state={
+    //     name:"",
+    //   };
+    // };
+    // chName=(event)=>{
+    //   this.setState({[event.target.name]:event.target.value.toUpperCase()});
+    // };
+    // subData=(event)=>{
+    //   event.preventDefault();
+    // };
+    //two & good
+    subMit=(event)=>{
       event.preventDefault();
+      const form = new FormData(event.target);
+      console.log(form.get("name"));
     };
     render(){
       return(
         <>
-          <form onSubmit={this.subData}>
+          <form onSubmit={
+            //one & bad
+            // this.subData
+            //two & good
+            this.subMit
+            }>
             <label>
               name:
-              <input name="name" type="text" value={this.state.name} onChange={this.chName}/>
+              {/* one & bad */}
+              {/* <input name="name" type="text" value={this.state.name} onChange={this.chName}/> */}
+              {/* two & good */}
+              <input name="name" type="text" />
             </label>
-            <input type="submit" value="submit"/>
+            {/* <input name="submit" type="submit" value="submit" /> */}
+            <button type="submit">submit</button>
           </form>
         </>
       );
