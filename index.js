@@ -17,7 +17,7 @@ root.render(
       <Layout>
       </Layout>
       <Routes>
-        <Route path="/" exact="true" element={<App/>}/>
+        <Route path="/" exact element={<App/>}/>
         <Route path="/Formclass" element={<Formclass/>}/>
         <Route path="/Formfunchoo" element={<Formfunchoo/>}/>
         <Route path="/Timeclass" element={<Timeclass/>}/>
