@@ -8,19 +8,19 @@ const Links = () => {
     <div>
       <ul>
         <li>
-            <NavLink to="/" exact="true" activestyle={{fontWeight:'bold'}} >App</NavLink>
+            <NavLink to="/" exact="true" activestyle="active" style={{fontWeight:'bold'}} >App</NavLink>
         </li>
         <li>
-            <NavLink to="/Formclass" activestyle={{fontWeight:'bold'}}>Formclass</NavLink>
+            <NavLink to="/Formclass" activestyle="active" style={{fontWeight:'bold'}} >Formclass</NavLink>
         </li>
         <li>
-            <NavLink to="/Formfunchoo" activestyle={{fontWeight:'bold'}}>Formfunchoo</NavLink>
+            <NavLink to="/Formfunchoo" activestyle="active" style={{fontWeight:'bold'}} >Formfunchoo</NavLink>
         </li>
         <li>
-            <NavLink to="/Timeclass" activestyle={{fontWeight:'bold'}}>Timeclass</NavLink>
+            <NavLink to="/Timeclass" activestyle="active" style={{fontWeight:'bold'}} >Timeclass</NavLink>
         </li>
         <li>
-            <NavLink to="/Timefunchoo" activestyle={{fontWeight:'bold'}}>Timefunchoo</NavLink>
+            <NavLink to="/Timefunchoo" activestyle="active" style={{fontWeight:'bold'}} >Timefunchoo</NavLink>
         </li>
       </ul>
     </div>
