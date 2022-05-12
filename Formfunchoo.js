@@ -17,9 +17,15 @@ const Formfunchoo = () => {
   //   console.log(form.get("name"));
   // };
   //three & perfect
-  const {register,handleSubmit,watch,formState:{errors},} = useForm(
+  const {register,handleSubmit,watch,formState:{errors},reset} = useForm(
     {defaultValues:{yname:"your name"}}
   );
+  // useEffect(() => {
+    
+  //   return () => {
+  //     reset();
+  //   }},[]
+  // );
   const subMithandle = (sdata) => {
     console.log(sdata);
     console.log(watch("yname"));
