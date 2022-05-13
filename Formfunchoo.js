@@ -1,6 +1,7 @@
 import React, { useState,memo } from 'react';
 //three & perfect
 import { useForm } from 'react-hook-form';
+import sweetAlert from 'sweetalert';
 const Formfunchoo = () => {
   //one & bad
   // const [name, setName] = useState("");
@@ -27,8 +28,20 @@ const Formfunchoo = () => {
   //   }},[]
   // );
   const subMithandle = (sdata) => {
-    console.log(sdata);
-    console.log(watch("yname"));
+    sweetAlert({
+      title: "sendinfo",
+      text: "sendInfo",
+      icon: "warning",
+      buttons: true,
+      dangerMode: true,
+      buttons: ["cacel", "send"]
+    })
+    .then((sdata) => {
+      if (sdata) {
+        console.log(sdata);
+        console.log(watch("yname"));
+      }
+    });
   };
   return (
     <>
