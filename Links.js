@@ -5,7 +5,7 @@ const Links = () => {
 
   return (
 
-    <div>
+    <>
       <ul>
         <li>
             <NavLink to="/" exact="true" activestyle="active" style={{fontWeight:'bold'}} >App</NavLink>
@@ -23,7 +23,7 @@ const Links = () => {
             <NavLink to="/Timefunchoo" activestyle="active" style={{fontWeight:'bold'}} >Timefunchoo</NavLink>
         </li>
       </ul>
-    </div>
+    </>
     
   );
 
