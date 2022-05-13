@@ -1,5 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
+//HashRouter => .../#/...
+//MemoryRouter => ...(hide)
 import {BrowserRouter as Router,Routes,Route} from 'react-router-dom';
 import './index.css';
 import Layout from './Layouts';
