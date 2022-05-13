@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState,memo } from 'react';
 //three & perfect
 import { useForm } from 'react-hook-form';
 const Formfunchoo = () => {
@@ -61,4 +61,4 @@ const Formfunchoo = () => {
     </>
   );
 };
-export default Formfunchoo;
+export default memo(Formfunchoo);
