@@ -8,12 +8,12 @@ const Layouts = (props) => {
 
   return (
 
-    <div>
+    <>
       <Links/>
     <div>
       {children}
     </div>
-    </div>
+    </>
     
   );
 
