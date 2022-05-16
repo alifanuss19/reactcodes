@@ -5,26 +5,20 @@ import ReactDOM from 'react-dom/client';
 import {BrowserRouter as Router,Routes,Route} from 'react-router-dom';
 import './index.css';
 import Layout from './Layouts';
-import App from './App';
-import Formclass from './Formclass';
-import Formfunchoo from './Formfunchoo';
-import Timeclass from './Timeclass';
-import Timefunchoo from './Timefunchoo';
+import PrivateRoute from './PrivateRoute';
+import Loginfunchoo from './Loginfunchoo';
 import reportWebVitals from './reportWebVitals';
 
+const userInfo=JSON.parse(localStorage.getItem('user'));
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
     <Router>
-      <Layout>
+      <Layout userInfo={userInfo}>
       </Layout>
       <Routes>
-        <Route path="/" exact element={<App/>}/>
-        <Route path="/Formclass" element={<Formclass/>}/>
-        <Route path="/Formfunchoo" element={<Formfunchoo/>}/>
-        <Route path="/Timeclass" element={<Timeclass/>}/>
-        <Route path="/Timefunchoo" element={<Timefunchoo/>}/>
-        <Route path="*" element={<App/>}/>
+        <Route path="*" element={<PrivateRoute/>}/>
+        <Route path="/Loginfunchoo" exact element={<Loginfunchoo/>}/>
       </Routes>
     </Router>
   </React.StrictMode>
