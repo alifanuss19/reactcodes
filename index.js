@@ -9,12 +9,11 @@ import PrivateRoute from './PrivateRoute';
 import Loginfunchoo from './Loginfunchoo';
 import reportWebVitals from './reportWebVitals';
 
-const userInfo=JSON.parse(localStorage.getItem('user'));
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
     <Router>
-      <Layout userInfo={userInfo}>
+      <Layout>
       </Layout>
       <Routes>
         <Route path="*" element={<PrivateRoute/>}/>
