@@ -1,7 +1,9 @@
 import React, { memo } from 'react';
+import { useLocation } from "react-router-dom";
 import { useForm } from 'react-hook-form';
 import sweetAlert from 'sweetalert';
 const Loginfunchoo = () => {
+  const location = useLocation();
   const {register,handleSubmit,watch,formState:{errors},reset} = useForm(
     {defaultValues:{email:"",password:""}}
   );
@@ -30,7 +32,7 @@ const Loginfunchoo = () => {
           token:'./a,gerjoihjthmskjsghjkgnazqmfgdmnbj,.fjn/.,/oil.;'
         };
         localStorage.setItem('user', JSON.stringify(user));
-        console.log("hi");
+        window.location.reload();
         // }else{
         //       setTimeout(() => {
         //         console.log(sdata);
