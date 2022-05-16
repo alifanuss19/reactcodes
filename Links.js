@@ -17,6 +17,9 @@ const Links = () => {
             <NavLink to="/Formfunchoo" activestyle="active" style={{fontWeight:'bold'}} >Formfunchoo</NavLink>
         </li>
         <li>
+            <NavLink to="/Loginfunchoo" activestyle="active" style={{fontWeight:'bold'}} >Loginfunchoo</NavLink>
+        </li>
+        <li>
             <NavLink to="/Timeclass" activestyle="active" style={{fontWeight:'bold'}} >Timeclass</NavLink>
         </li>
         <li>
