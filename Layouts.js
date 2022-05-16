@@ -5,7 +5,6 @@ import Links from './Links';
 
 const Layouts = (props) => {
 
-  
   const location = useLocation();
   
   const userInfo=JSON.parse(localStorage.getItem('user'));
