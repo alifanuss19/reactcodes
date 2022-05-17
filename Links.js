@@ -2,6 +2,7 @@ import React from 'react';
 import {NavLink} from 'react-router-dom';
 
 const Links = () => {
+  const userInfo=JSON.parse(localStorage.getItem('user'));
 
   return (
 
@@ -16,9 +17,11 @@ const Links = () => {
         <li>
             <NavLink to="/Formfunchoo" activestyle="active" style={{fontWeight:'bold'}} >Formfunchoo</NavLink>
         </li>
+        {userInfo?"":
         <li>
             <NavLink to="/Loginfunchoo" activestyle="active" style={{fontWeight:'bold'}} >Loginfunchoo</NavLink>
-        </li>
+        </li>        
+        }
         <li>
             <NavLink to="/Timeclass" activestyle="active" style={{fontWeight:'bold'}} >Timeclass</NavLink>
         </li>
