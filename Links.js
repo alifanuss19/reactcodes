@@ -25,6 +25,12 @@ const Links = () => {
         <li>
             <NavLink to="/Timefunchoo" activestyle="active" style={{fontWeight:'bold'}} >Timefunchoo</NavLink>
         </li>
+        <li>
+            <NavLink to="/UsersPosts" activestyle="active" style={{fontWeight:'bold'}} >UsersPosts</NavLink>
+        </li>
+        <li>
+            <NavLink to="/CategoriesList" activestyle="active" style={{fontWeight:'bold'}} >CategoriesList</NavLink>
+        </li>
       </ul>
     </>
     
