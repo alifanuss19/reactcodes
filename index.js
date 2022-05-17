@@ -7,6 +7,8 @@ import './index.css';
 import Layout from './Layouts';
 import PrivateRoute from './PrivateRoute';
 import Loginfunchoo from './Loginfunchoo';
+import UsersPosts from './UsersPosts';
+import CategoriesList from './CategoriesList';
 import reportWebVitals from './reportWebVitals';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
@@ -18,6 +20,8 @@ root.render(
       <Routes>
         <Route path="*" element={<PrivateRoute/>}/>
         <Route path="/Loginfunchoo" exact element={<Loginfunchoo/>}/>
+        <Route path="/UsersPosts" exact element={<UsersPosts/>}/>
+        <Route path="/CategoriesList" exact element={<CategoriesList/>}/>
       </Routes>
     </Router>
   </React.StrictMode>
