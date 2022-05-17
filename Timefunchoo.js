@@ -1,4 +1,4 @@
-import React, { useState , useEffect } from 'react';
+import React, { memo , useState , useEffect } from 'react';
 const Timefunchoo = () => {
   const [timeis, setTimeis] = useState(new Date().toLocaleTimeString());
   useEffect(() => {
@@ -16,4 +16,4 @@ const Timefunchoo = () => {
     </div>
   );
 };
-export default Timefunchoo;
+export default memo(Timefunchoo);
