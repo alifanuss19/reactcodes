@@ -2,8 +2,9 @@ import React, { memo } from 'react';
 import { useLocation } from "react-router-dom";
 import { useForm } from 'react-hook-form';
 import sweetAlert from 'sweetalert';
-const Loginfunchoo = () => {
+const Loginfunchoo = ({isLoading}) => {
   const location = useLocation();
+  const userInfo=JSON.parse(localStorage.getItem('user'));
   const {register,handleSubmit,watch,formState:{errors},reset} = useForm(
     {defaultValues:{email:"",password:""}}
   );
@@ -14,7 +15,7 @@ const Loginfunchoo = () => {
   //   }},[]
   // );
   const subMithandle = (sdata) => {
-    if (sdata.email=="a@gmail.com" && sdata.password=="a") {
+    if (sdata.email==="a@gmail.com" && sdata.password==="a") {
       const user = {
         userId : 'uuid',
         //guid
@@ -75,7 +76,7 @@ const Loginfunchoo = () => {
           {errors.password&&<small>please,fill with 5 charachter</small>}
         </label>
         {/* <input name="submit" type="submit" value="submit" /> */}
-        <button type="submit">submit</button>
+        <button type="submit" disabled={userInfo?"disabled":""}>submit</button>
       </form>
     </>
   );
