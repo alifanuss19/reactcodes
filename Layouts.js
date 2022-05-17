@@ -11,8 +11,8 @@ const Layouts = (props) => {
 
   const gologOut=()=>{
     if(userInfo){
-    localStorage.clear();
-    window.location.reload();
+      localStorage.clear();
+      window.location.reload();
     };
   };
 
@@ -26,11 +26,11 @@ const Layouts = (props) => {
     </div>
       <Links/>
     <div>
-    <button onClick={gologOut}>logOut</button>
+      {userInfo?<button onClick={gologOut}>logOut</button>:""}
     </div>
     <div>
       {children}
-    </div> 
+    </div>
     </>
     
   );
