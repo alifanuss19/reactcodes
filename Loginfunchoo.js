@@ -14,34 +14,36 @@ const Loginfunchoo = () => {
   //   }},[]
   // );
   const subMithandle = (sdata) => {
-    if (sdata) {
+    if (sdata.email=="a@gmail.com" && sdata.password=="a") {
+      const user = {
+        userId : 'uuid',
+        //guid
+        userName : sdata.email,
+        userPass : sdata.password,
+        token:'./a,gerjoihjthmskjsghjkgnazqmfgdmnbj,.fjn/.,/oil.;'
+      };
       sweetAlert({
         title: "it is your email & sendinfo ?",
         text: sdata.email,
         icon: "warning",
         buttons: true,
-        dangerMode: true,
-        buttons: ["no", "yes"]
+        dangerMode: true
       })
-      .then((sdata) => {
-        // if(sdata.email=="a@gmail.com" && sdata.password=="a"){
-        const user = {
-          userId : 'uuid',
-          //guid
-          userName : 'a',
-          token:'./a,gerjoihjthmskjsghjkgnazqmfgdmnbj,.fjn/.,/oil.;'
-        };
+      .then(
+        (sdata) => {
         localStorage.setItem('user', JSON.stringify(user));
         window.location.reload();
-        // }else{
-        //       setTimeout(() => {
-        //         console.log(sdata);
-        //         console.log(watch("email"));
-        //         console.log(watch("password"));
-        //       }, 500);
-        // };
-      });
-    };
+        },
+        (error) => {
+            alert("error");
+        },);
+    }else{
+        setTimeout(() => {
+          console.log(sdata);
+          console.log(watch("email"));
+          console.log(watch("password"));
+        }, 500);
+      };
   };
   return (
     <>
