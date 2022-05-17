@@ -11,6 +11,7 @@ import UsersPosts from './UsersPosts';
 import CategoriesList from './CategoriesList';
 import reportWebVitals from './reportWebVitals';
 
+const userInfo=JSON.parse(localStorage.getItem('user'));
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
@@ -19,7 +20,7 @@ root.render(
       </Layout>
       <Routes>
         <Route path="*" element={<PrivateRoute/>}/>
-        <Route path="/Loginfunchoo" exact element={<Loginfunchoo/>}/>
+        {userInfo?"":<Route path="/Loginfunchoo" exact element={<Loginfunchoo/>}/>}
         <Route path="/UsersPosts" exact element={<UsersPosts/>}/>
         <Route path="/CategoriesList" exact element={<CategoriesList/>}/>
       </Routes>
