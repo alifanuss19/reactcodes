@@ -31,11 +31,15 @@ const Loginfunchoo = () => {
       })
       .then(
         (sdata) => {
-        localStorage.setItem('user', JSON.stringify(user));
-        window.location.reload();
+          if (sdata) {
+            localStorage.setItem('user', JSON.stringify(user));
+            window.location.reload();
+          };
         },
         (error) => {
-            alert("error");
+          if (!sdata) {
+            alert("error or cancelled submit");
+          }
         },);
     }else{
         setTimeout(() => {
