@@ -34,6 +34,9 @@ const Links = () => {
         <li>
             <NavLink to="/CategoriesList" activestyle="active" style={{fontWeight:'bold'}} >CategoriesList</NavLink>
         </li>
+        <li>
+            <NavLink to="/ADiagram" activestyle="active" style={{fontWeight:'bold'}} >ADiagram</NavLink>
+        </li>
       </ul>
     </>
     
