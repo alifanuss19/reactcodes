@@ -10,6 +10,7 @@ import Loginfunchoo from './Loginfunchoo';
 import UsersPosts from './UsersPosts';
 import CategoriesList from './CategoriesList';
 import reportWebVitals from './reportWebVitals';
+import ADiagram from './ADiagram';
 
 const userInfo=JSON.parse(localStorage.getItem('user'));
 const root = ReactDOM.createRoot(document.getElementById('root'));
@@ -23,6 +24,7 @@ root.render(
         {userInfo?"":<Route path="/Loginfunchoo" exact element={<Loginfunchoo/>}/>}
         <Route path="/UsersPosts" exact element={<UsersPosts/>}/>
         <Route path="/CategoriesList" exact element={<CategoriesList/>}/>
+        <Route path="/ADiagram" exact element={<ADiagram/>}/>
       </Routes>
     </Router>
   </React.StrictMode>
