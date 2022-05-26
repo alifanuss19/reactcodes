@@ -20,8 +20,8 @@ root.render(
       <Layout>
       </Layout>
       <Routes>
-        <Route path="*" element={<PrivateRoute/>}/>
         {userInfo?"":<Route path="/Loginfunchoo" exact element={<Loginfunchoo/>}/>}
+        <Route path="*" element={<PrivateRoute/>}/>
         <Route path="/UsersPosts" exact element={<UsersPosts/>}/>
         <Route path="/CategoriesList" exact element={<CategoriesList/>}/>
         <Route path="/ADiagram" exact element={<ADiagram/>}/>
